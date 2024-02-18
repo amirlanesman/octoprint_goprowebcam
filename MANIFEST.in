@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_goprowebcam/templates *
+recursive-include octoprint_goprowebcam/translations *
+recursive-include octoprint_goprowebcam/static *

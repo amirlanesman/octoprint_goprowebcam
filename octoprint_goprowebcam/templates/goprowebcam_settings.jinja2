@@ -1,0 +1,26 @@
+<div id="goprowebcam_settings">
+    <h3>{{ _('Settings') }}</h3>
+    <form class="form-horizontal" onsubmit="return false;">
+        <div class="control-group" title="{{ _('We actually only need the last 3 numbers')|edq }}">
+            <label class="control-label" for="settings-serial">{{ _('GoPro Serial Number (S/N)') }}</label>
+            <div class="controls">
+                <div class="input-append">
+                    <input type="text" class="input-block-level" data-bind="value: settings.plugins.goprowebcam.serial, valueUpdate: 'afterkeydown'" id="settings-serial">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div><small><a href="#" class="muted" data-bind="toggleContent: { class: 'fa-caret-right fa-caret-down', parent: '.form-horizontal', container: '.hide' }"><i class="fas fa-caret-right"></i> {{ _('Advanced options') }}</a></small></div>
+            <div class="hide">
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            <input type="checkbox" data-bind="checked: settings.plugins.goprowebcam.keep_files_on_camera" id="settings-webcamFlipH"> {{ _('Keep photos on GoPro (might fill up sd card') }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
